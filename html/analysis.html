@@ -1,0 +1,68 @@
+<!--====================================================================
+    |                                                                  |
+    |    Copyright © George Stamoulis - 2013 - All Rights Reserved.    |
+    |    This file is part of the Xenoglossy Wordpress plugin.         |
+    |                                                                  |
+    ====================================================================-->
+
+<div class="xg_hidden" id="translated_<?php echo($lang['locale']);?>">
+    <form method="post" action="#">
+        <input class="hide_button" type="submit" name="reset" value="close">
+    </form>
+    <div class="windowed">
+        <h3 class="title"><?php printf(__('Translated %s'), $lang['locale']);?></h3>
+        <table class="widefat">
+            <thead>
+                <tr>
+                    <th><?php _e("ID");?></th>
+                    <th><?php _e("Title");?></th>
+                    <th><?php _e("Author");?></th>
+                    <th><?php _e("Status");?></th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th><?php _e("ID");?></th>
+                    <th><?php _e("Title");?></th>
+                    <th><?php _e("Author");?></th>
+                    <th><?php _e("Status");?></th>
+                </tr>
+            </tfoot>
+            <tbody>
+            <?php analysis_table($translated, $format, $lang['locale']);?>
+            </tbody>
+        </table>
+    </div><!-- end of .windowed -->
+</div><!-- end of #<?php echo($lang['locale']);?>_analysis -->
+<div class="xg_hidden" id="remnant_<?php echo($lang['locale']);?>">
+    <form method="post" action="#">
+        <input class="hide_button" type="submit" name="reset" value="close">
+    </form>
+    <div class="windowed">
+        <h3 class="title"><?php printf(__('Remnant %s'), $lang['locale']);?></h3>
+        <table class="widefat">
+            <thead>
+                <tr>
+                    <th><?php _e("ID");?></th>
+                    <th><?php _e("Title");?></th>
+                    <th><?php _e("Author");?></th>
+                    <th><?php _e("Type");?></th>
+                    <th><?php _e("Status");?></th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th><?php _e("ID");?></th>
+                    <th><?php _e("Title");?></th>
+                    <th><?php _e("Author");?></th>
+                    <th><?php _e("Type");?></th>
+                    <th><?php _e("Status");?></th>
+                </tr>
+            </tfoot>
+            <tbody>
+            <?php analysis_table($remnant, $format, $lang['locale']);?>
+            </tbody>
+        </table>
+    </div><!-- end of .windowed -->
+</div><!-- end of #<?php echo($lang['locale']);?>_analysis -->
+<!-- vim: set fileencoding=utf-8: -->

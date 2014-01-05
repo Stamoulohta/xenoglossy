@@ -1,0 +1,44 @@
+/********************************************************************
+ *                                                                  *
+ *    Copyright © George Stamoulis - 2013 - All Rights Reserved.    *
+ *    This file is part of the Xenoglossy Wordpress plugin.         *
+ *                                                                  *
+ ********************************************************************/
+
+#original_content{
+    max-width: 100%;
+    min-width: 100%;
+    height: 8em;
+}
+
+#original_title{
+    display: block;
+    width: 100%;
+    margin: 0.5em auto;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+#editor_container{
+    display: block;
+    max-width: 100%;
+}
+
+#post_title{
+    display: block;
+    width: 100%;
+    font-size: 1.4em;
+}
+
+#post_content{
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    height: 16em;
+}
+
+.void {
+    display: none;
+}
+
+/* vim: set fileencoding=utf-8 fdm=marker fmr={,}: */

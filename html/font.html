@@ -1,0 +1,43 @@
+<!--====================================================================
+    |                                                                  |
+    |    Copyright © George Stamoulis - 2013 - All Rights Reserved.    |
+    |    This file is part of the Xenoglossy Wordpress plugin.         |
+    |                                                                  |
+    ====================================================================-->
+
+<div class="xg_hidden" id="<?php echo($lang['locale']);?>_edit">
+    <form method="post" action="#">
+        <input class="hide_button" type="submit" name="reset" value="close">
+    </form>
+<form class="windowed" method="post" action="#">
+    <fieldset>
+        <legend><h3 class="title"><?php _e(sprintf('Edit %s Fonts', $lang['description']));?></h3></legend>
+        <table class="form-table">
+            <tbody>
+            <tr><th><label for="font_url"><?php _e('Font url');?></label></th>
+                <td><input name="font_url" type="url" id="font_url" class="regular-text"
+                    value="<?php echo($lang['font_url'] != 'Default' ? $lang['font_url'] : '');?>"/></td></tr>
+            <tr><th><label for="font_size"><?php _e('Font size');?></label></th>
+                <td><input name="font_size" type="number" id="font_size" class="regular-text"
+                    value="<?php echo($font_size[1]);?>"/>
+                <select name="size_unit" id="size_unit" class="regular-text">
+                        <option value="%"  <?php echo($font_size[2] == '%'  ? 'selected' : '');?>>%</option>
+                        <option value="in" <?php echo($font_size[2] == 'in' ? 'selected' : '');?>>in</option>
+                        <option value="cm" <?php echo($font_size[2] == 'cm' ? 'selected' : '');?>>cm</option>
+                        <option value="mm" <?php echo($font_size[2] == 'mm' ? 'selected' : '');?>>mm</option>
+                        <option value="em" <?php echo($font_size[2] == 'em' ? 'selected' : '');?>>em</option>
+                        <option value="ex" <?php echo($font_size[2] == 'ex' ? 'selected' : '');?>>ex</option>
+                        <option value="pt" <?php echo($font_size[2] == 'pt' ? 'selected' : '');?>>pt</option>
+                        <option value="pc" <?php echo($font_size[2] == 'pc' ? 'selected' : '');?>>pc</option>
+                        <option value="px" <?php echo($font_size[2] == 'px' ? 'selected' : '');?>>px</option>
+                </select>
+                <input type="hidden" name="locale" value="<?php echo($lang['locale']);?>"/></td>
+            </tr>
+            <tr><th/>
+                    <td><input type="submit" name="edit_font" id="edit_font" value="<?php _e('Update');?> "/></td></tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form>
+</div><!-- end of #<?php echo($lang['locale']);?>_edit -->
+<!-- vim: set fileencoding=utf-8: -->

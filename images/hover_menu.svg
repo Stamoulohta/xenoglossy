@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--====================================================================
+    |                                                                  |
+    |    Copyright © George Stamoulis - 2013 - All Rights Reserved.    |
+    |    This file is part of the Xenoglossy Wordpress plugin.         |
+    |                                                                  |
+    ====================================================================-->
+<svg width="20" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+    <title>Xenoglossy Hover Menu Icon</title>
+    <desc>The Xenoglossy Wordpress Plugin Hover Menu Icon</desc>
+    <metadata>Coded by George Stamoulis g.a.stamoulis(a+)gmail.com</metadata>
+
+    <defs>
+        <style type="text/css">
+            #xenoglossy {fill:none; stroke:#2ea2cc; stroke-width:1.5;}
+        </style>
+    </defs>
+
+
+    <g id="xenoglossy">
+        <circle cx="10" cy="9" r="8"/>
+        <line x1="3" y1="4.5" x2="17" y2="4.5"/>
+        <line x1="2" y1="9" x2="18" y2="9"/>
+        <line x1="3" y1="13.5" x2="17" y2="13.5"/>
+        <line x1="10" y1="1" x2="10" y2="17"/>
+        <ellipse cx="10" cy="9" rx="4.5" ry="8"/>
+    </g>
+</svg>

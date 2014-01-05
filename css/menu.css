@@ -1,0 +1,12 @@
+/********************************************************************
+ *                                                                  *
+ *    Copyright © George Stamoulis - 2013 - All Rights Reserved.    *
+ *    This file is part of the Xenoglossy wordpress plugin.         *
+ *                                                                  *
+ ********************************************************************/
+
+#toplevel_page_xg_opts:not(.wp-menu-open):hover img{
+    content:url('../images/hover_menu.svg'); /* doesn't work on ff27 ie11 */
+}
+
+/* vim: set fileencoding=utf-8 fdm=marker fmr={,}: */

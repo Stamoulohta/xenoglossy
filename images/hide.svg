@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--====================================================================
+    |                                                                  |
+    |    Copyright © George Stamoulis - 2013 - All Rights Reserved.    |
+    |    This file is part of the Xenoglossy Wordpress plugin.         |
+    |                                                                  |
+    ====================================================================-->
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+    <title>Xenoglossy Hide Icon</title>
+    <desc>The Xenoglossy Wordpress Plugin Form Hide Icon</desc>
+    <metadata>Coded by George Stamoulis g.a.stamoulis(a+)gmail.com</metadata>
+
+    <defs>
+        <style type="text/css">
+            #glyph{fill:none; stroke:rgb(88,88,88); stroke-opacity:0.5; stroke-linecap:round; stroke-width:10;}
+        </style>
+    </defs>
+
+    <path id="glyph" d="M 5 20 H 35"/>
+</svg>

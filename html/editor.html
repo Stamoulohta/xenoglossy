@@ -1,0 +1,69 @@
+<!--====================================================================
+    |                                                                  |
+    |    Copyright © George Stamoulis - 2013 - All Rights Reserved.    |
+    |    This file is part of the Xenoglossy Wordpress plugin.         |
+    |                                                                  |
+    ====================================================================-->
+
+<div class="wrap"> <!-- class "wrap" applies the wp_admin css. -->
+    <h2>Xenoglossy <a href="<?php echo(OPTSURL); ?>" class="add-new-h2">Configure</a></h2>
+    <form method="get" action="#">
+        <fieldset>
+            <legend><h3 class="title"><?php _e('Translate :');?></h3></legend>
+            <table class="form-table">
+                <tbody>
+                <tr><th><label for="post_selector"><?php _e('Choose post');?></label></th>
+                    <td><select name="post_selector" id="post_selector" class="regular-text">
+                            <option></option>
+                            <?php populate_post_selector($posts);?>
+                    </select></td>
+                    <th><label for"locale_selector"><?php _e('Choose language');?></label></th>
+                    <td><select name="locale_selector" id="locale_selector" class="regular-text" required>
+                            <?php populate_locale_selector($active_languages, $selected_locale);?>
+                    </select></td>
+                    <td><input type="submit" value="<?php _e('Go');?>"/></td>
+                    <input type="hidden" name="page" value="<?php echo(XG_EDIT);?>"/>
+                </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+    <hr/>
+    <h3 class="title"><?php _e('Original :');?></h3>
+    <label for="original_content" id="original_title"><?php selected_title($selected_post);?></label>
+    <textarea id="original_content" readonly="readonly"><?php selected_content($selected_post);?></textarea>
+    <hr/>
+    <form method="post" action="#" class="<?php default_editor_class($original_id);?>">
+        <fieldset>
+            <legend><h3 class="title"><?php translation_header($active_languages, $selected_locale);?></h3></legend>
+            <input type="text" name="post_title" id="post_title" 
+                value="<?php translated_title($translation);?>" placeholder="<?php _e('Title');?>" <?php is_disabled($original_id);?>/>
+            <div id="editor_container">
+                <div id="editor_toolbar" class="<?php toolbar_class();?>">
+                    <input type="button" id="tr_content_strong" class="ed_button" accesskey="b" title value="b"/>
+                    <input type="button" id="tr_content_em" class="ed_button" accesskey="i" title value="i"/>
+                    <input type="button" id="tr_content_link" class="ed_button" accesskey="a" title value="link"/>
+                    <input type="button" id="tr_content_block" class="ed_button" accesskey="q" title value="b-quote"/>
+                    <input type="button" id="tr_content_del" class="ed_button" accesskey="d" title value="del"/>
+                    <input type="button" id="tr_content_ins" class="ed_button" accesskey="s" title value="ins"/>
+                    <input type="button" id="tr_content_img" class="ed_button" accesskey="m" title value="img"/>
+                    <input type="button" id="tr_content_ul" class="ed_button" accesskey="u" title value="ul"/>
+                    <input type="button" id="tr_content_ol" class="ed_button" accesskey="o" title value="ol"/>
+                    <input type="button" id="tr_content_li" class="ed_button" accesskey="l" title value="li"/>
+                    <input type="button" id="tr_content_code" class="ed_button" accesskey="c" title value="code"/>
+                    <input type="button" id="tr_content_more" class="ed_button" accesskey="t" title value="more"/>
+                    <input type="button" id="tr_content_close" class="ed_button" title="Close all open tags" value="Close tags"/>
+                </div><!-- end of #editor toolbar -->
+                <textarea name="post_content" id="post_content" <?php is_disabled($original_id);?>><?php translated_content($translation);?></textarea>
+            </div><!-- end of #editor_container -->
+            <hr/>
+            <input type="hidden" name="translation_id" value="<?php translation_id($translation);?>"/>
+            <input type="hidden" name="locale" value="<?php echo($selected_locale);?>"/>
+            <input type="hidden" name="original_id" value="<?php echo($original_id);?>"/>
+            <input type="submit" name="save" value="Save as Draft" class="button" accesskey="s" <?php is_disabled($original_id);?>/>
+                <a class="button" href="#" <?php is_disabled($original_id);?>>Preview</a>
+            <input type="submit" name="submit" value="Submit" class="button button-primary button-large" accesskey="p" <?php is_disabled($original_id);?>/>
+        </fieldset>
+    </form>
+</div><!-- end of .wrap -->
+<!-- vim: set fileencoding=utf-8: -->

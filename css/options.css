@@ -1,0 +1,99 @@
+/********************************************************************
+ *                                                                  *
+ *    Copyright © George Stamoulis - 2013 - All Rights Reserved.    *
+ *    This file is part of the Xenoglossy wordpress plugin.         *
+ *                                                                  *
+ ********************************************************************/
+
+.hide_button{
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+    border-radius: 20%;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1 !important;
+    color: transparent; /* Fix for Firefox */
+    padding: 0 0 0 16px !important; /* Fix for Internet Explorer */
+    background: #f1f1f1 url('../images/hide.svg') no-repeat center;
+    background-size: 0.8em;
+    -moz-box-shadow: 2px 2px 6px #888;
+    -webkit-box-shadow: 2px 2px 6px #888;
+    box-shadow: 2px 2px 6px #888;
+}
+
+.hide_button:hover{
+    background-color: #f9f9f9;
+}
+
+.note{
+    padding: 0;
+    margin: 0;
+    font-size: 0.7em;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.xg_hidden{
+    display: none;
+    position: absolute;
+    background-color: #a8a8a8;
+    border: solid #b1b1b1 1px;
+    top: 10%;
+    max-height: 80%;
+    padding: 2em 0 0 0;
+    -moz-box-shadow: 5px 5px 5px 5px #888;
+    -webkit-box-shadow: 5px 5px 5px 5px #888;
+    box-shadow: 5px 5px 5px 5px #888;
+    z-index: 2;
+}
+
+.xg_hidden:target{
+    display:block;
+}
+
+.windowed {
+    padding: 1em 3em 3em 3em;
+    background-color: #f1f1f1;
+}
+
+.table_delete{
+    display: absolute;
+    visibility: hidden;
+    cursor: pointer;
+    color: red;
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.table_delete:hover{
+    color: #ff4444;
+}
+
+tr.with_options > td{
+    padding-bottom: 0px;
+}
+
+.a_edit{
+    visibility: hidden;
+}
+
+td:hover .a_edit, td:hover .table_delete{
+    visibility: visible;
+}
+
+#form_hide{
+    display: block;
+    float: right;
+    padding: 0 1em;
+    background-color:#a8a8a8;
+}
+
+/* vim: set fileencoding=utf-8 fdm=marker fmr={,}: */

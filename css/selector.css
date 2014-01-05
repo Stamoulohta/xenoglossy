@@ -1,0 +1,26 @@
+/********************************************************************
+ *                                                                  *
+ *    Copyright © George Stamoulis - 2013 - All Rights Reserved.    *
+ *    This file is part of the Xenoglossy wordpress plugin.         *
+ *                                                                  *
+ ********************************************************************/
+
+/* TODO add instructions for selector modification. */
+
+#xg_selector{
+    position: relative;
+    float: right;
+    top: 0px;
+    margin-right: 10px;
+    display: block;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.selector_ctl{
+    display: inline-block;
+    background-color: transparent;
+    margin-left: 5px;
+}
+
+/* vim: set fileencoding=utf-8 fdm=marker fmr={,}: */
