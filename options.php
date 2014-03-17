@@ -72,7 +72,7 @@ function add_language($form_data, $default_locale){
  * Formats the input.
  *
  * @param  array $form_data the post data.
- * @return array the data formatted.
+ * @return array            the data formatted.
  */
 function sanitize($form_data){
     $selected_locale = explode(' : ', $form_data['locale_selector']);

@@ -11,9 +11,10 @@
 define('HTMLDIR', MAINDIR . 'html'   . DIRECTORY_SEPARATOR);
 
 /* HANDLES */
+define('XG_TXTDOM' , 'xenoglossy');     // text domain
+define('TRANSLAT'  , 'translation');    // post_type
 define('LANGTAX'   , 'xg_lang');        // taxonomy
 define('PARENTAX'  , 'xg_parent');      // taxonomy
-define('TRANSLAT'  , 'translation');    // post_type
 define('XG_LANGS'  , 'xg_langs');       // option
 define('XG_SELECT' , 'xg_selector');    // option
 define('XG_HIDE'   , 'xg_hide_plea');   // option

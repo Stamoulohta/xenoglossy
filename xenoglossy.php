@@ -7,6 +7,7 @@
  * Version: 01.00.00
  * Author: George Stamoulis
  * Author URI: http://www.stamoulohta.com
+ * Text Domain: xenoglossy
  * Licence: LGPL3
  *
  ********************************************************************
